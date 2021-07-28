@@ -1,7 +1,14 @@
 import * as api from '../../api/pizzas';
 
-export const fetchPizzas = () => async (dispatch) => {
-  const data = await api.getAll();
+export const fetchPizzas = (category, sortBy) => async (dispatch) => {
+  dispatch(setLoaded(false));
+
+  const params = {
+    category,
+    _sort: sortBy.type,
+    _order: sortBy.order,
+  };
+  const data = await api.fetchPizzas(params);
   dispatch(setPizzas(data));
 };
 

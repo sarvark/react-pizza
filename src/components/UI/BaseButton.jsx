@@ -7,6 +7,6 @@ export default function Button({ onClick, className, outline, children }) {
         'button--outline': outline,
       })}>
       {children}
-        </button>
+    </button>
   );
 }
