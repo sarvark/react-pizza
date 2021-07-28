@@ -1,4 +1,16 @@
-export const setPizzas = (items) => ({
+import * as api from '../../api/pizzas';
+
+export const fetchPizzas = () => async (dispatch) => {
+  const data = await api.getAll();
+  dispatch(setPizzas(data));
+};
+
+export const setPizzas = (payload) => ({
   type: 'SET_PIZZAS',
-  payload: items,
+  payload,
+});
+
+export const setLoaded = (payload) => ({
+  type: 'SET_LOADED',
+  payload,
 });

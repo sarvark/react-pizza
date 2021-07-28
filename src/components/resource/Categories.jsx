@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
-function Categories({ items, onClick }) {
+const Categories = React.memo(({ items, onClickItem }) => {
   const [activeItem, setActiveItem] = useState(null);
 
   const handleClickItem = (id) => {
     setActiveItem(id);
+    onClickItem(id);
   };
 
   const renderLi = items?.map((el, idx) => {
@@ -27,6 +28,6 @@ function Categories({ items, onClick }) {
       </ul>
     </div>
   );
-}
+});
 
 export default Categories;

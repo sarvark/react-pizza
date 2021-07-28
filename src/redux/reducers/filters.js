@@ -14,15 +14,15 @@ const filters = (state = initialState, action) => {
   return state;
 };
 
-const category = (state = initialState, action) => {
-  if (action.type === 'SET_CATEGORY') {
-    return {
-      ...state,
-      category: action.payload,
-    };
-  }
+// const category = (state = initialState, action) => {
+//   if (action.type === 'SET_CATEGORY') {
+//     return {
+//       ...state,
+//       category: action.payload,
+//     };
+//   }
 
-  return state;
-};
+//   return state;
+// };
 
 export default filters;

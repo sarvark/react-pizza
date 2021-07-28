@@ -14,6 +14,7 @@ function PizzaBlock({ name, sizes, price, imageUrl, types }) {
   };
   const availableTypes = ['тонкое', 'традиционное'];
   const availableSizes = [26, 30, 40];
+
   return (
     <div className="pizza-block">
       <img className="pizza-block__image" src={imageUrl} alt="Pizza" />
