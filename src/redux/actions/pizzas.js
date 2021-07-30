@@ -1,4 +1,5 @@
 import * as api from '../../api/pizzas';
+import { Types } from './types';
 
 export const fetchPizzas = (category, sortBy) => async (dispatch) => {
   dispatch(setLoaded(false));
@@ -13,11 +14,11 @@ export const fetchPizzas = (category, sortBy) => async (dispatch) => {
 };
 
 export const setPizzas = (payload) => ({
-  type: 'SET_PIZZAS',
+  type: Types.SET_PIZZAS,
   payload,
 });
 
 export const setLoaded = (payload) => ({
-  type: 'SET_LOADED',
+  type: Types.SET_LOADED_PIZZAS,
   payload,
 });
